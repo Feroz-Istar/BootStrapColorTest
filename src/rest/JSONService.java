@@ -1,4 +1,4 @@
-package com.istarindia.android.rest;
+package rest;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -12,7 +12,7 @@ public class JSONService {
 	@Path("/{param}")
 	public Response getMsg(@PathParam("param") String msg) {
 
-		String output = "Jersey say : " + msg;
+		String output = "dd Jersey say : " + msg;
 
 		return Response.status(200).entity(output).build();
 
