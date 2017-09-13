@@ -50,4 +50,13 @@ public class LoginService {
 	}
 	
 	
+
+	@POST
+	@Path("/fetchJson/{param}/{lol}")
+	@Consumes(MediaType.APPLICATION_JSON)
+	public Response getPatheMsg(@PathParam("param") String msg,@PathParam("lol") String lol) {
+		String output = "jsonRequest msgmsgmsgmsgmsg " + msg+" -> "+lol;
+		return Response.status(200).entity(output).build();
+	}
+	
 }
