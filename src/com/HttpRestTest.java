@@ -12,15 +12,15 @@ public class HttpRestTest {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		try {
-			sendPost();
+			sendPost("http://localhost:8080/BootStrapColorTest/champ/auth/game","email=C02G8416DRJM&password=12345");
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
-	private static void sendPost() throws Exception {
+	private static void sendPost(String urls,String paramss) throws Exception {
 
-		String url = "http://localhost:8080/BootStrapColorTest/champ/auth/game";
+		String url = urls;
 		URL obj = new URL(url);
 		HttpURLConnection  con = (HttpURLConnection ) obj.openConnection();
 
@@ -30,7 +30,7 @@ public class HttpRestTest {
 		con.setRequestProperty("Accept-Language", "en-US,en;q=0.5");
 		con.setRequestProperty("Content-Type", "application/x-www-form-urlencoded"); 
 
-		String urlParameters = "email=C02G8416DRJM&password=12345";
+		String urlParameters = paramss;
 
 		// Send post request
 		con.setDoOutput(true);
