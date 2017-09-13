@@ -19,6 +19,6 @@
   </servlet>
   <servlet-mapping>
     <servlet-name>rest-servlet</servlet-name>
-    <url-pattern>/*</url-pattern>
+    <url-pattern>/champ/*</url-pattern>
   </servlet-mapping>
 </web-app>
